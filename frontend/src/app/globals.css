@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary: var(--on-primary);
+  --color-on-primary-container: var(--on-primary-container);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary: var(--on-secondary);
+  --color-on-secondary-container: var(--on-secondary-container);
+
+  --color-charcoal-900: var(--charcoal-900);
+  --color-charcoal-800: var(--charcoal-800);
+  --color-charcoal-700: var(--charcoal-700);
+  --color-charcoal-600: var(--charcoal-600);
+  --color-charcoal-500: var(--charcoal-500);
+  --color-charcoal-400: var(--charcoal-400);
+  --color-charcoal-300: var(--charcoal-300);
+
+  --color-background: var(--background);
+  --color-on-background: var(--on-background);
+  --color-surface: var(--surface);
+  --color-surface-dim: var(--surface-dim);
+  --color-surface-bright: var(--surface-bright);
+  --color-surface-lowest: var(--surface-container-lowest);
+  --color-surface-low: var(--surface-container-low);
+  --color-surface-card: var(--surface-container);
+  --color-surface-high: var(--surface-container-high);
+  --color-surface-highest: var(--surface-container-highest);
+
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+
+  --color-tertiary: var(--tertiary);
+  --color-error: var(--error);
+  --color-success: var(--success);
+}
+
+:root {
+  /* Fit by Nazeri Design System Tokens (from DESIGN.md & Brandbook) */
+  
+  /* Surfaces & Charcoal Stack (ذغال‌سنگی تیره) */
+  --background: #141414;
+  --on-background: #e5e2e1;
+  --surface: #141414;
+  --surface-dim: #141414;
+  --surface-bright: #3a3a3c;
+  --surface-container-lowest: #0c0c0d;
+  --surface-container-low: #1a1a1c;
+  --surface-container: #222224;
+  --surface-container-high: #2c2c2e;
+  --surface-container-highest: #3a3a3c;
+  --surface-variant: #3a3a3c;
+  --on-surface: #f5f5f7;
+  --on-surface-variant: #acabb1;
+  --inverse-surface: #f5f5f7;
+  --inverse-on-surface: #1e1e20;
+  --outline: #605f64;
+  --outline-variant: #444447;
+  --border-subtle: #2c2c2e;
+  --surface-tint: #ff6600;
+
+  /* Primary Palette - نارنجی هیجان‌انگیز (Exciting Orange) */
+  --primary: #ff6600;
+  --primary-hover: #ff8532;
+  --primary-active: #542201;
+  --on-primary: #ffffff;
+  --primary-container: #542201;
+  --on-primary-container: #ffe0cc;
+  --primary-tint-1: #ff8532;
+  --primary-tint-2: #ffa366;
+  --primary-tint-3: #ffc299;
+  --primary-tint-4: #ffe0cc;
+
+  /* Secondary Palette - سرمه‌ای ملایم (Soft Navy) */
+  --secondary: #3e59a8;
+  --secondary-hover: #5469a8;
+  --on-secondary: #ffffff;
+  --secondary-container: #141e39;
+  --on-secondary-container: #dce4ff;
+  --secondary-tint-1: #5469a8;
+  --secondary-tint-2: #8089a8;
+  --secondary-tint-3: #9699a8;
+  --secondary-tint-4: #a8a8a8;
+
+  /* Charcoal Scale (پالت ذغال‌سنگی و خاکستری) */
+  --charcoal-900: #141414;
+  --charcoal-800: #1f1f21;
+  --charcoal-700: #3a3a3c;
+  --charcoal-600: #605f64;
+  --charcoal-500: #87868b;
+  --charcoal-400: #acabb1;
+  --charcoal-300: #d1d0d6;
+
+  /* Feedback & Alerts */
+  --tertiary: #ffa366;
+  --on-tertiary: #361200;
+  --tertiary-container: #542201;
+  --on-tertiary-container: #ffe0cc;
+  --error: #ff5449;
+  --on-error: #ffffff;
+  --error-container: #5c0004;
+  --on-error-container: #ffdad6;
+  --success: #22c55e;
+  --on-success: #ffffff;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--on-surface);
+  font-family: var(--font-vazir), 'Yekan Bakh', 'Vazirmatn', system-ui, -apple-system, sans-serif;
+  direction: rtl;
+  overflow-x: hidden;
+  font-feature-settings: "ss01" 1;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a3c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6600;
+}
+
+.font-mono-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-feature-settings: "ss01" 0;
+}
+
+/* Glows & Lighting Accents */
+.glow-primary {
+  box-shadow: 0 0 25px -4px rgba(255, 102, 0, 0.45);
+}
+
+.glow-primary-sm {
+  box-shadow: 0 0 12px -2px rgba(255, 102, 0, 0.4);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 25px -4px rgba(62, 89, 168, 0.45);
+}
+
+.glow-secondary-sm {
+  box-shadow: 0 0 12px -2px rgba(62, 89, 168, 0.35);
+}
+
+.bg-grid-vivid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
+
+/* Tiptap editor (uses .blog-content for WYSIWYG parity with the public blog page) */
+.tiptap-area { min-height: 440px; outline: none; }
+.tiptap-area p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: right;
+  height: 0;
+  color: #64748b;
+  pointer-events: none;
+}
+.tiptap-area img.ProseMirror-selectednode,
+.tiptap-area .ProseMirror-selectednode { outline: 2px solid #ff6600; }
+.tiptap-area table { table-layout: fixed; }
+.tiptap-area td, .tiptap-area th { position: relative; vertical-align: top; min-width: 3rem; }
+.tiptap-area .selectedCell::after { content: ""; position: absolute; inset: 0; background: rgba(255, 102, 0, 0.18); pointer-events: none; }
+.tiptap-area mark, .blog-content mark { background: rgba(255, 102, 0, 0.35); color: inherit; padding: 0 0.15em; border-radius: 2px; }
+.tiptap-area iframe, .blog-content iframe { max-width: 100%; aspect-ratio: 16 / 9; height: auto; border-radius: 8px; margin: 1rem 0; }
+.blog-content pre { background: #0d0d0d; border: 1px solid #2c2c2e; border-radius: 8px; padding: 1rem; overflow-x: auto; direction: ltr; text-align: left; font-size: 0.85rem; line-height: 1.7; }
+.blog-content code { font-family: ui-monospace, monospace; }
+
+/* Blog Rich HTML Content Styles */
+.blog-content {
+  color: #e5e2e1;
+  font-size: 0.95rem;
+  line-height: 2.1;
+  text-align: justify;
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6 {
+  color: #ffffff;
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.blog-content h1 { font-size: 1.85rem; border-bottom: 2px solid #2c2c2e; padding-bottom: 0.5rem; }
+.blog-content h2 { font-size: 1.5rem; color: #ff6600; }
+.blog-content h3 { font-size: 1.25rem; }
+.blog-content h4 { font-size: 1.1rem; }
+
+.blog-content p {
+  margin-bottom: 1.25rem;
+}
+
+.blog-content ul,
+.blog-content ol {
+  padding-right: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.blog-content ul {
+  list-style-type: disc;
+}
+
+.blog-content ol {
+  list-style-type: decimal;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-content blockquote {
+  border-right: 4px solid #ff6600;
+  background: #1a1a1c;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+  color: #e5e2e1;
+  font-style: italic;
+}
+
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1.5rem auto;
+  border: 1px solid #2c2c2e;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: #1a1a1c;
+  border: 1px solid #2c2c2e;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.blog-content th,
+.blog-content td {
+  padding: 0.85rem 1rem;
+  border: 1px solid #2c2c2e;
+  text-align: right;
+  font-size: 0.875rem;
+}
+
+.blog-content th {
+  background: #222224;
+  color: #ff6600;
+  font-weight: 700;
+}
+
+.blog-content a {
+  color: #ff6600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: opacity 0.2s;
+}
+
+.blog-content a:hover {
+  opacity: 0.85;
+}
+
+.blog-content strong,
+.blog-content b {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.blog-content hr {
+  border-color: #2c2c2e;
+  margin: 2rem 0;
+}

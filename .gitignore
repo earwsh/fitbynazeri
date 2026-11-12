@@ -1,0 +1,17 @@
+node_modules/
+.next/
+out/
+.env*
+*.tsbuildinfo
+.DS_Store
+# compiled Go binary
+backend/server
+backend/backend.exe
+
+backend/backend.exe~
+
+# user data - never commit
+backend/*.db
+backend/uploads/
+backend/vendor/
+backend/server
